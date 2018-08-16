@@ -12,6 +12,8 @@ This gem must appear in both **development and production** groups so add one of
 gem 'capistrano-checks'
 ```
 
+or
+
 ```ruby
 group :development, :production do
   gem 'capistrano-checks'
@@ -20,15 +22,17 @@ end
 
 And then execute:
 
-    $ bundle
-
-You the need to add this to your `Capfile` preferably directly under `require "capistrano/bundler"`
-
+```bash
+$ bundle
 ```
+
+You then need to add this to your `Capfile` preferably directly under `require "capistrano/bundler"`
+
+```ruby
 require "capistrano/checks"
 ```
 
-Note that checks run directly after the `bundler:install stage.
+Note that checks run directly after the `bundler:install` stage.
 
 ## Contributing
 
