@@ -1,11 +1,11 @@
 
 lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-#require "capistrano-checks/version"
+require "capistrano-checks/version"
 
 Gem::Specification.new do |spec|
   spec.name          = "capistrano-checks"
-  spec.version       = "0.0.1" #CapistranoChecks::VERSION
+  spec.version       = CapistranoChecks::VERSION
   spec.authors       = ["Jeremy Walker"]
   spec.email         = ["jez.walker@gmail.com"]
 
