@@ -1,11 +1,11 @@
 
 lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require "capistrano/checks/version"
+#require "capistrano-checks/version"
 
 Gem::Specification.new do |spec|
   spec.name          = "capistrano-checks"
-  spec.version       = Capistrano::Checks::VERSION
+  spec.version       = "0.0.1" #CapistranoChecks::VERSION
   spec.authors       = ["Jeremy Walker"]
   spec.email         = ["jez.walker@gmail.com"]
 
@@ -20,6 +20,8 @@ Gem::Specification.new do |spec|
   spec.bindir        = "exe"
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
+
+  spec.add_dependency "capistrano", ">= 3.1"
 
   spec.add_development_dependency "bundler", "~> 1.16"
   spec.add_development_dependency "rake", "~> 10.0"
